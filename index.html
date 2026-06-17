@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Foodie's Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+
+    <nav>
+        <h2 class="logo">🍽️ Foodie's</h2>
+        <div class="cart">
+    🛒 Cart: <span id="cart-count">0</span>
+</div>
+
+        <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#reservation">Reservation</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#order">Order & Payment</a></li>
+</ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Our Restaurant</h1>
+
+        <p>Delicious Food, Great Ambience, Best Experience!</p>
+<button onclick="location.href='#reservation'">Book a Table</button>
+    </section>
+   <!-- MENU SECTION -->
+< <!-- MENU SECTION -->
+<section id="menu">
+
+    <h2>Our Menu</h2>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showMenu('veg')">🥦 Veg</button>
+        <button class="tab-btn" onclick="showMenu('nonveg')">🍗 Non-Veg</button>
+    </div>
+
+    <!-- VEG MENU -->
+    <div id="veg" class="menu-container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600">
+            <h3>🍕 Veg Pizza</h3>
+            <p>Loaded with vegetables</p>
+            <h4>₹349</h4>
+
+            <button onclick="addToCart('Veg Pizza',349)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600">
+            <h3>🍔 Veg Burger</h3>
+            <p>Crispy veggie patty</p>
+            <h4>₹199</h4>
+            <button onclick="addToCart('Veg Burger',199)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600">
+            <h3>🥗 Salad</h3>
+            <p>Fresh healthy salad</p>
+            <h4>₹149</h4>
+            <button onclick="addToCart('Salad',149)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600">
+            <h3>🍚 Veg Biryani</h3>
+            <p>Authentic Indian rice</p>
+            <h4>₹299</h4>
+            <button onclick="addToCart('Veg Biryani',299)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600">
+            <h3>🧀 Paneer Tikka</h3>
+            <p>Grilled paneer cubes</p>
+            <h4>₹249</h4>
+            <button onclick="addToCart('Paneer Tikka',249)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600">
+            <h3>🥪 Veg Sandwich</h3>
+            <p>Loaded veggie sandwich</p>
+            <h4>₹129</h4>
+            <button onclick="addToCart('Veg Sandwich',129)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600">
+            <h3>🍜 Veg Noodles</h3>
+            <p>Chinese style noodles</p>
+            <h4>₹179</h4>
+            <button onclick="addToCart('Veg Noodles',179)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600">
+            <h3>🥟 Veg Momos</h3>
+            <p>Steamed veg momos</p>
+            <h4>₹149</h4>
+            <button onclick="addToCart('Veg Momos',149)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=600">
+            <h3>🥞 Masala Dosa</h3>
+            <p>South Indian special</p>
+            <h4>₹169</h4>
+            <button onclick="addToCart('Masala Dosa',169)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=600">
+            <h3>🍟 French Fries</h3>
+            <p>Crispy potato fries</p>
+            <h4>₹99</h4>
+            <button onclick="addToCart('French Fries',99)">🛒 Add to Cart</button>
+        </div>
+        <div class="card">
+    <img src="https://images.unsplash.com/photo-1617692855027-33b14f061079?w=600">
+    <h3>🫓 Butter Naan</h3>
+    <p>Soft naan with butter</p>
+    <h4>₹40</h4>
+    <button onclick="addToCart('Butter Naan',40)">🛒 Add to Cart</button>
+</div>
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1617692855027-33b14f061079?w=600">
+    <h3>🫓 Garlic Naan</h3>
+    <p>Naan topped with garlic</p>
+    <h4>₹60</h4>
+    <button onclick="addToCart('Garlic Naan',60)">🛒 Add to Cart</button>
+</div>
+
+
+
+    </div>
+
+    <!-- NON VEG MENU -->
+    <div id="nonveg" class="menu-container" style="display:none;">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=600">
+            <h3>🍗 Chicken Biryani</h3>
+            <p>Spicy dum biryani</p>
+            <h4>₹399</h4>
+            <button onclick="addToCart('Chicken Biryani',399)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600">
+            <h3>🍛 Butter Chicken</h3>
+            <p>Creamy curry</p>
+            <h4>₹449</h4>
+            <button onclick="addToCart('Butter Chicken',449)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=600">
+            <h3>🐟 Fish Fry</h3>
+            <p>Crispy fried fish</p>
+            <h4>₹399</h4>
+            <button onclick="addToCart('Fish Fry',399)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=600">
+            <h3>🍕 Chicken Pizza</h3>
+            <p>Loaded chicken toppings</p>
+            <h4>₹499</h4>
+            <button onclick="addToCart('Chicken Pizza',499)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600">
+            <h3>🍔 Chicken Burger</h3>
+            <p>Juicy chicken patty</p>
+            <h4>₹249</h4>
+            <button onclick="addToCart('Chicken Burger',249)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600">
+            <h3>🍖 Grilled Chicken</h3>
+            <p>Perfectly grilled chicken</p>
+            <h4>₹349</h4>
+            <button onclick="addToCart('Grilled Chicken',349)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600">
+            <h3>🥚 Egg Curry</h3>
+            <p>Traditional Indian curry</p>
+            <h4>₹229</h4>
+            <button onclick="addToCart('Egg Curry',229)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600">
+            <h3>🍢 Chicken Tikka</h3>
+            <p>Spicy grilled chicken</p>
+            <h4>₹379</h4>
+            <button onclick="addToCart('Chicken Tikka',379)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600">
+            <h3>🍜 Chicken Noodles</h3>
+            <p>Asian style noodles</p>
+            <h4>₹249</h4>
+            <button onclick="addToCart('Chicken Noodles',249)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600">
+            <h3>🥩 Mutton Curry</h3>
+            <p>Rich and spicy gravy</p>
+            <h4>₹549</h4>
+            <button onclick="addToCart('Mutton Curry',549)">🛒 Add to Cart</button>
+        </div>
+
+    </div>   
+
+</section>
+
+</section>
+<section class="reservation">
+
+
+    <section class="reservation" id="reservation">
+
+    <h2>🍽️ Reserve Your Table</h2>
+
+    <section class="reservation">
+
+    <h2>Book Your Table</h2>
+
+    <form>
+
+       <input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<input type="tel" id="phone" placeholder="Phone Number" required>
+
+<input type="date" id="date" required>
+
+<input type="time" id="time" required>
+
+<input type="number" id="guests" placeholder="Number of Guests" required>
+
+<button type="button" onclick="bookTable()">
+    Book Table
+</button>
+        
+
+    </form>
+
+</section>
+        </button>
+
+    </form>
+
+</section>
+<section id="order" class="order-payment">
+
+    <h2>🛒 Online Order & Payment</h2>
+
+    <div class="order-box">
+
+        <h3>Place Your Order</h3>
+
+        <input type="text" id="order-name" placeholder="Your Name">
+        <input type="text" id="order-item" placeholder="Food Item">
+        <input type="number" id="order-qty" placeholder="Quantity">
+
+        <button onclick="placeOnlineOrder()">Place Order</button>
+
+    </div>
+
+    <div class="payment-box">
+
+        <h3>💳 Payment Section</h3>
+
+        <select id="payment-method">
+            <option value="">Select Payment Method</option>
+            <option value="upi">UPI</option>
+            <option value="card">Card</option>
+            <option value="cod">Cash on Delivery</option>
+        </select>
+
+        <input type="text" id="upi-id" placeholder="Enter UPI ID (if UPI selected)">
+
+        <button onclick="makePayment()">Pay Now</button>
+
+    </div>
+
+</section>
+<section class="events">
+
+
+    <section class="events" id="events">
+
+    <h2>🎉 Upcoming Events</h2>
+
+    <div class="event-container">
+
+        <div class="event-card">
+            <div class="event-icon">🎵</div>
+            <h3>Live Music Night</h3>
+            <p>Enjoy live music every Saturday with delicious food and drinks.</p>
+            <span>Every Saturday • 8:00 PM</span>
+        </div>
+
+        <div class="event-card">
+            <div class="event-icon">🍕</div>
+            <h3>Food Festival</h3>
+            <p>Special menu, discounts and chef's signature dishes.</p>
+            <span>This Sunday • 12:00 PM</span>
+        </div>
+
+        <div class="event-card">
+            <div class="event-icon">🎂</div>
+            <h3>Birthday Parties</h3>
+            <p>Celebrate birthdays with custom decoration and cake arrangements.</p>
+            <span>Available All Week</span>
+        </div>
+
+        <div class="event-card">
+            <div class="event-icon">💍</div>
+            <h3>Private Events</h3>
+            <p>Book our restaurant space for family gatherings and celebrations.</p>
+            <span>Advance Booking Required</span>
+        </div>
+
+    </div>
+
+</section>
+</section>
+<section class="contact" id="contact">
+
+    <h2>📞 Contact Us</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <h3>📍 Address</h3>
+            <p>Mumbai, Maharashtra, India</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>📞 Phone</h3>
+            <p>+91 9876543210</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>📧 Email</h3>
+            <p>foodiesrestaurant@gmail.com</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>🕒 Opening Hours</h3>
+            <p>Mon - Sun : 10:00 AM - 11:00 PM</p>
+        </div>
+
+    </div>
+
+</section>
+<footer>
+    <p>© 2026 Foodie's Restaurant | All Rights Reserved</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html> 
